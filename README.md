@@ -55,8 +55,8 @@ This repo includes a `render.yaml` blueprint for backend deploy.
 2. In Render, choose **New +** -> **Blueprint** and connect the repository.
 3. Select the `anveshana-backend` service and deploy.
 4. In Render service environment variables, set:
-	- `GEMINI_API_KEY`
 	- `AI_SERVICE_URL` (public URL of your Python AI service)
+	- `OPENAI_API_KEY` (optional, only if you want social wall text moderation)
 	- `WHATSAPP_BOT_NAME` (optional)
 	- `WHATSAPP_REPLY_MAX_CHARS` (optional)
 5. Health check path is `/api/health`.

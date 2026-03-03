@@ -10,7 +10,7 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 20
-      - key: GEMINI_API_KEY
+      - key: OPENAI_API_KEY
         sync: false
       - key: AI_SERVICE_URL
         sync: false
