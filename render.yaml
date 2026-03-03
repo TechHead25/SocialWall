@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: anveshana-backend
+    runtime: node
+    rootDir: backend
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: AI_SERVICE_URL
+        sync: false
+      - key: WHATSAPP_BOT_NAME
+        value: Anveshana Guide
+      - key: WHATSAPP_REPLY_MAX_CHARS
+        value: 900

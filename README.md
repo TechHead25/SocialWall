@@ -47,6 +47,24 @@ python app.py
 AI Service runs on:
 - `http://localhost:8000`
 
+## Deploy Backend on Render
+
+This repo includes a `render.yaml` blueprint for backend deploy.
+
+1. Push this repo to GitHub.
+2. In Render, choose **New +** -> **Blueprint** and connect the repository.
+3. Select the `anveshana-backend` service and deploy.
+4. In Render service environment variables, set:
+	- `GEMINI_API_KEY`
+	- `AI_SERVICE_URL` (public URL of your Python AI service)
+	- `WHATSAPP_BOT_NAME` (optional)
+	- `WHATSAPP_REPLY_MAX_CHARS` (optional)
+5. Health check path is `/api/health`.
+
+Notes:
+- Render sets `PORT` automatically (already supported in backend config).
+- If you don't deploy the Python AI service, chatbot/photo/highlights endpoints that call AI will fail.
+
 ## Environment Setup
 
 Copy these templates and fill values:
